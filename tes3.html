@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Kartika's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #85203c;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #85203c;
+    font-size: 50px;
+  }
+  .logo {
+    color: #85203c;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: 1px solid #85203c;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #85203c;
+  }
+  .carousel-indicators li {
+    border-color: #85203c;
+  }
+  .carousel-indicators li.active {
+    background-color: #85203c;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #85203c; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .dropdown-menu{
+    background-color: #85203c !important;
+    color: #fff !important;
+  }
+  .kontak a{
+    text-decoration: none!important;
+    color: #818181!important;
+  }
+  .panel-hub {
+    border: 1px solid #85203c;
+    background-color: #fff !important;
+    color: #85203c !important;
+  }
+  .panel-hub:hover {
+    border: 1px solid #fff;
+    background-color: #85203c !important;
+    color: #fff !important;
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #85203c;
+    background-color: #fff !important;
+    color: #85203c;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #85203c !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #85203c;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #85203c;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand , .panel-footer .btn a{
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a , .panel-footer .btn a:hover{
+    color: #85203c !important;
+    background-color: #fff !important;
+    text-decoration: none;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #85203c;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Kartika's Portfolio</a>
+    </div>
+
+
+<div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#skill">SKILL</a></li>
+          <li class="dropdown "><a class="dropdown-toggle" data-toggle="dropdown" href="#">PORTFOLIO<span class="caret"></span></a>
+            <ul class="dropdown-menu ">
+              <li><a href="#portfolio">ALL</a></li>
+              <li><a href="#keskop">KESKOP</a></li>
+              <li><a href="#gris">GRIS FASHION</a></li>
+              <li><a href="#ui">UI DESIGN</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+
+
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Kartika's Portfolio</h1> 
+  <p>Selamat datang di portfolio saya.</p> 
+  <form>
+    <div class="input-group">
+      <div class="input-group-btn">
+        <a href="https://wa.me/message/FCA4XVAEPJTNC1" target="_blank"><button type="button" class="btn panel-hub">Hubungi Saya</button></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Tentang Saya</h2><br>
+      <h4>Ni Luh Kartika Dewi</h4>
+          <p>Saya adalah lulusan dari STIKI Indonesia (Februari 2021) dengan program studi Teknik Informatika konsentransi Komputer Akuntansi Bisnis. Fokus dari jurusan saya adalah bagaimana mengimplementasikan ilmu akuntansi ke dalam sebuah teknologi informasi</p>
+          <p>
+          Setelah lulus kuliah saya memperdalam kemampuan programming saya dengan mengikuti pelatihan Junior Web Programmer yang diadakan oleh Kementrian Perindustrian Denpasar dan mengikuti tes kompetensi dan dinyatakan kompeten.
+          </p>
+          <p>
+          Saya juga mengikuti pelatihan Data Engineer yang diadakan oleh DQLab dimana saya mempelajari bagaimana melakukan pengelolaan data mulai dari pembersihan data hingga mentransformasikan data sesuai dengan aturan yang telah ditentukan.
+          </p>
+          <p>
+          Saat ini saya memiliki tim dan usaha yang saya bangun sendiri, hal ini membuat saya memiliki kemampuan dalam leadership dan kerjasama tim. Tugas saya adalah bertanggung jawab terhadap klien dan sistem yang dihasilkan agar sesuai dengan keinginan klien. Saya juga melakukan pengujian sistem hingga memberikan arahan tentang penggunaan sistem kepada klien.
+          </p>
+      
+    </div>
+    <div class="col-sm-4">
+      <span class=""></span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Services Section) -->
+<div id="skill" class="container-fluid text-center bg-grey">
+  <h2>SKILL</h2>
+  <h4>Kemampuan dan Skill</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="fas fa-code logo-small"></span>
+      <h4>HTML/CSS/JS</h4>
+      
+    </div>
+    <div class="col-sm-4">
+      <span class="fab fa-php logo-small"></span>
+      <h4>PHP</h4>
+      
+    </div>
+    <div class="col-sm-4">
+      <span class="fas fa-database logo-small"></span>
+      <h4>MySql</h4>
+      
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="fa fa-palette logo-small"></span>
+      <h4>UI Design</h4>
+     
+    </div>
+    <div class="col-sm-4">
+      <span class="fas fa-child logo-small"></span>
+      <h4>TESTING</h4>
+      
+    </div>
+    <div class="col-sm-4">
+      <span class="fas fa-briefcase logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center ">
+  <h2>Portfolio</h2><br>
+  <h4>What I have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4 ">
+      <div class="thumbnail">
+        <img src="images/10berandakeskop.jpg" alt="KESKOP" width="400" height="300">
+        <p><strong>Aplikasi Analisis Kondisi Kesehatan Koperasi</strong></p>
+        <p>Memberikan saran dan rekomendasi perbaikan predikat kesehatan koperasi</p>
+        <div class="panel-footer">
+          <a href="#keskop"><button class="btn btn-lg">Lihat</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/21beranda.jpg" alt="GRIS FASHION" width="400" height="300">
+        <p><strong>Gris Fashion E-Commerce</strong></p>
+        <p>Mengelola data produk, data pemesanan hingga proses pembayaran dan pengiriman produk.</p>
+        <div class="panel-footer">
+          <a href="#gris"><button class="btn btn-lg">Lihat</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/41ui.jpg" alt="Ui Design" width="400" height="300">
+        <p><strong>UI Design</strong></p>
+        <p>Membuat Wireframe sesuai dengan kebutuhan klien yang nantinya akan diserahkan kepada tim programmer</p>
+        <div class="panel-footer" >
+          <a href="#ui"><button class="btn btn-lg">Lihat</button></a>
+        </div>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<!-- Container (KESKOP) -->
+<div id="keskop" class="container-fluid text-center bg-grey">
+  <h2>Aplikasi Analisis Kondisi Kesehatan Koperasi</h2>
+  <h4>Memberikan saran dan rekomendasi perbaikan predikat kesehatan koperasi berdasarkan aspek penilaian.<br>
+      Dapat mengelola data aspek penilaian, data bobot aspek, data kriteria, data akun, data saran serta menampilkan laporan ATMR, laporan modal tertimbang, laporan penilaian, saran dan perbaikan.
+  </h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/10berandakeskop.jpg" alt="beranda" width="400" height="300">
+        <p><strong>Halaman Beranda</strong></p>
+        <p>Menampilkan ringkasan predikat dan skor periode terakhir yang ditambahkan serta menampilkan grafik perbandingan skor setiap periode.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/13lapkeskop.jpg" alt="Lap. Penilaian KESKOP" width="400" height="300">
+        <p><strong>Halaman Laporan Penilaian Kesehatan Koperasi</strong></p>
+        <p>Menampilkan skor dan kriteria penilaian kesehatan koperasi pada periode tertentu sesuai aspek yang telah ditambahkan.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/14saran.jpg" alt="Saran & Perbaikan" width="400" height="300">
+        <p><strong>Halaman Saran dan Perbaikan</strong></p>
+        <p>Menampilkan saran dan rekomendasi perbaikan aspek kesehatan koperasi berdasarkan penilaian yang telah dilakukan.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/20lapatmr.jpg" alt="Laporan ATMR" width="400" height="300">
+        <p><strong>Halaman Laporan ATMR</strong></p>
+        <p>Menampilkan laporan ATMR berdasarkan penghitungan yang telah dilakukan. Laporan ini berguna untuk mengetahui besarnya resiko terhadap aktiva.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/19lapmt.jpg" alt="Laporan Modal Tertimbang" width="400" height="300">
+        <p><strong>Halaman Laporan Modal Tertimbang</strong></p>
+        <p>Menampilkan laporan Modal Tertimbang berdasarkan penghitungan yang telah dilakukan. Laporan ini berguna untuk mengetahui besarnya resiko terhadap modal.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/18lapmanajemen.jpg" alt="Laporan Manajemen" width="400" height="300">
+        <p><strong>Halaman Laporan Manajemen</strong></p>
+        <p>Menampilkan hasil dari survey manajemen yang telah dilakukan. Laporan ini berguna untuk mengetahui data apa saja yang perlu disiapkan oleh koperasi.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/11inputlapneraca.jpg" alt="Data Aspek" width="400" height="300">
+        <p><strong>Halaman Data Aspek</strong></p>
+        <p>Menampilkan data aspek yang akan digunakan untuk melakukan penilaian kesehatan koperasi diantaranya nama aspek dan rumus perhitungannya.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/16aspektbh.jpg" alt="Tambah Data Aspek" width="400" height="300">
+        <p><strong>Halaman Tambah Data Aspek</strong></p>
+        <p>Menampilkan formulir untuk menambah data aspek penilaian kesehatan koperasi yang terdiri dari kategori, nama dan rumus perhitungan.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/15aspek.jpg" alt="Input Data Penilaian" width="400" height="300">
+        <p><strong>Halaman Input Data Penilaian</strong></p>
+        <p>Menampilkan formulir untuk menambahkan data penilaian koperasi yang terdiri dari laporan neraca, perhitungan SHU, peminjaman dan  manajemen.</p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<!-- Container (GRIS FASHION) -->
+<div id="gris" class="container-fluid text-center ">
+  <h2>GRIS FASHION (E-Commerce)</h2>
+  <h4>Pelanggan dapat melihat data produk, memesan produk, melakukan pembayaran hingga mengetahui status pemesanan.<br> Admin dapat mengelola data produk, mengelola kategori produk, melihat data pesanan, hingga mengelola slider.
+  </h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/21beranda.jpg" alt="Beranda" width="400" height="300">
+        <p><strong>Halaman Beranda Pelanggan</strong></p>
+        <p>Menampilkan slider untuk informasi promo dan lain-lain, menampilkan data produk, kategori produk hingga kontak toko. Terdapat tombol pesan untuk memesan produk.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/26akun.jpg" alt="Akun" width="400" height="300">
+        <p><strong>Halaman Akun Pelanggan</strong></p>
+        <p>Menampilkan informasi data pengguna dan data pesanan serta status pesanan produk yang telah dilakukan. Terdapat tombol bayar untuk melakukan pembayaran.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/22keranjang.jpg" alt="Keranjang" width="400" height="300">
+        <p><strong>Halaman Keranjang</strong></p>
+        <p>Menampilkan produk-produk yang telah dipilih oleh pelanggan, apabila ingin memesan produk, pelanggan dapat menekan tombol checkout.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/23checkout.jpg" alt="Checkout" width="400" height="300">
+        <p><strong>Halaman Checkout</strong></p>
+        <p>Halaman ini digunakan sebagai validasi jika ingin memesan dan melakukan pembayaran dengan menekan tombol lanjut pembayaran agar pesanan dapat diproses oleh admin.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/24bayar.jpg" alt="Pembayaran" width="400" height="300">
+        <p><strong>Halaman Pembayaran</strong></p>
+        <p>Halaman ini digunakan untuk memilih metode pembayaran yang akan digunakan diantaranya Cash On Delivery (COD) dan metode transfer ke salah satu bank yang dituju.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/25bukti.jpg" alt="Bukti Pembayaran" width="400" height="300">
+        <p><strong>Halaman Bukti Pembayaran</strong></p>
+        <p>Halaman ini digunakan sebagai validasi jika ingin memesan dan melakukan pembayaran dengan menekan tombol lanjut pembayaran agar pesanan dapat diproses oleh admin.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/31beranda.jpg" alt="Beranda Admin" width="400" height="300">
+        <p><strong>Halaman Beranda Admin</strong></p>
+        <p>Menampilkan informasi-informasi rinci produk hingga pemesanan, pengaturan profil dan slider.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/35produk.jpg" alt="Data Produk" width="400" height="300">
+        <p><strong>Halaman Data Produk</strong></p>
+        <p>Menampilkan data produk yang telah ditambahkan diantaranya nama, kategori hingga tombol ubah produk.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/32pesanan.jpg" alt="Data Pesanan" width="400" height="300">
+        <p><strong>Halaman Data Pesanan</strong></p>
+        <p>Menampilkan data produk yang telah dipesan oleh pelanggan. Admin dapat mengkonfirmasi produk dengan menekan tombol kirim</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/33slider.jpg" alt="Slider" width="400" height="300">
+        <p><strong>Halaman Pengaturan Slider</strong></p>
+        <p>Menampilkan slider yang digunakan di halaman beranda. Admin dapat mengubah atau menambah slider.</p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<!-- Container (WIREFRAME) -->
+<div id="ui" class="container-fluid text-center bg-grey">
+  <h2>UI Design</h2>
+  <h4>Membuat Wireframe sesuai dengan kebutuhan klien yang nantinya akan diserahkan kepada tim programmer.</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/71spk.jpg" alt="Wireframe SPK" width="400" height="300">
+        <p><strong>Wireframe Sistem Pengambil Keputusan Pemilihan Paket Dekorasi</strong></p>
+        <p>Membuat wireframe untuk memilih paket dekorasi berdasarkan kriteria yang ditambahkan. Wireframe untuk menambah data paket hingga melakukan pembayaran yang disesuaikan dengan kebutuhan dan alur yang telah ditentukan. </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/72abs.jpg" alt="Absensi Karyawan dan Penjurnalan" width="400" height="300">
+        <p><strong>Wireframe Sistem Informasi Absensi Karyawan dan Penjurnalan</strong></p>
+        <p>Membuat wireframe untuk melakukan absensi kayawan, melakukan proses penggajian karyawan hingga penjurnalan dan menampilkan laporan keuangan yang disesuaikan dengan kebutuhan dan alur yang telah ditentukan.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/73pos.jpg" alt="Sistem Point Of Sales" width="400" height="300">
+        <p><strong>Wireframe Sistem Point Of Sales</strong></p>
+        <p>Membuat wireframe untuk mengelola produk, melakukan transaksi point of sales, melakukan transaksi pembelian produk hingga menampilkan laporan yang disesuaikan dengan kebutuhan dan alur yang telah ditentukan.</p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid ">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="text-center kontak">
+      <p>Jangan ragu untuk menghubungi saya</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Denpasar Selatan, Bali</p>
+      <p><a href="https://wa.me/message/FCA4XVAEPJTNC1" target="_blank"><span class="fab fa-whatsapp-square"></span> +62 8311 739 7971</a></p>
+      <p><a href="mailto:kartikadewi5697@gmail.com" target="_blank"><span class="glyphicon glyphicon-envelope"></span> kartikadewi5697@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/nkartikadewi/" target="_blank"><span class="fab fa-linkedin"></span> linkedin</a></p>
+      <p><a href="https://kartika19.github.io/kartikadewi/" target="_blank"><span class="fab fa-github"></span> github</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a> edited by Kartika</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, .panel-footer a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
